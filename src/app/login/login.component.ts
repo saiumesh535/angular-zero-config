@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,13 +16,13 @@ export class LoginComponent implements OnInit {
 
   public githubLink = 'https://github.com/saiumesh535/angular-zero-config';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   public ngOnInit(): void {
   }
 
   public onFormSubmit(): void {
-    console.log(this.loginForm);
+   this.router.navigate(['dashboard']);
   }
 
   public onpenRepo(): void {
