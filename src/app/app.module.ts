@@ -14,6 +14,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ContentComponent } from './content/content.component';
 import { ContentResolver } from './content/content.resolver';
+import { StoreModuler } from './ngrx-store/store.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContentResolver } from './content/content.resolver';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    StoreModuler,
   ],
   providers: [ ContentResolver ],
   bootstrap: [AppComponent]
