@@ -9,11 +9,20 @@ import { LoginComponent } from './login/login.component';
 
 import { router } from '../app.routing';
 import { MaterialModule } from './app.styles';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ContentComponent } from './content/content.component';
+import { ContentResolver } from './content/content.resolver';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    WelcomeComponent,
+    NavigationComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +32,7 @@ import { MaterialModule } from './app.styles';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ ContentResolver ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

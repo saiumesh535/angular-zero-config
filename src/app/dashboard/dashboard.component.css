@@ -1,0 +1,19 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.dash_toolbar.mat-elevation-z5 {
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper {
+  grid-template-rows: 0fr 1fr;
+  display: grid;
+  height: 100vh;
+}
