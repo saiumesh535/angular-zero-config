@@ -1,0 +1,40 @@
+.wrapper {
+  background: #4879d4;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.login-card.mat-card { 
+  width: 350px;
+  height: 280px;
+  padding: 40px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  border-radius: 10px;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.logo {
+  padding: 10px;
+  width: 42px; 
+  height: 42px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
