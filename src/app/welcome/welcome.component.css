@@ -9,4 +9,6 @@
 .naviagate {
   padding: 10px;
   background: #f5f7f9;
+  position: relative;
+  overflow-y: auto;
 }

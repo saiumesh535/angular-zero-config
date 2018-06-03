@@ -1,0 +1,6 @@
+.wrapper {
+  overflow-y: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
