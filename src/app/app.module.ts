@@ -15,6 +15,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ContentComponent } from './content/content.component';
 import { ContentResolver } from './content/content.resolver';
 import { StoreModuler } from './ngrx-store/store.module';
+import { EffectsModuler } from './ngrx-effetcs/effetcs.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { StoreModuler } from './ngrx-store/store.module';
     FormsModule,
     ReactiveFormsModule,
     StoreModuler,
+    EffectsModuler,
   ],
   providers: [ ContentResolver ],
   bootstrap: [AppComponent]

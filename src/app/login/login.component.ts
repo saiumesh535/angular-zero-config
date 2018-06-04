@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 
 import * as authState from './login.reducer';
-import { LoginAction } from './login.actions';
+import { LoginAction, LoginEffect } from './login.actions';
 import { selectLoginPageState } from './selectore';
 
 @Component({
@@ -31,9 +31,10 @@ export class LoginComponent implements OnInit {
 
   public onFormSubmit(): void {
     //  this.router.navigate(['dashboard']);
-    this.store.dispatch(new LoginAction({ login: true, user: {
-      username: new Date().toDateString(),
-    } }));
+    // this.store.dispatch(new LoginAction({ login: true, user: {
+    //   username: new Date().toDateString(),
+    // } }));
+    this.store.dispatch(new LoginEffect({ login: true, user: { username: this.loginForm.value.username  } }));
   }
 
   public onpenRepo(): void {
