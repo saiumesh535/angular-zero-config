@@ -11,7 +11,5 @@ export class LoginAction implements Action {
   constructor(public payload: State ) {}
 }
 
-
-
-export type AuthActions = | LoginAction;
+export type AuthActions = LoginAction;
 
