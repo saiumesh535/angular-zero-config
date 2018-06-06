@@ -6,7 +6,6 @@ export enum LoginActionType {
   LoginEffect = '[Auth] loginEffect',
 }
 
-
 export class LoginAction implements Action {
   readonly type = LoginActionType.Login;
   constructor(public payload: State ) {}
@@ -16,7 +15,6 @@ export class LoginEffect implements Action {
   readonly type = LoginActionType.LoginEffect;
   constructor(public payload: State ) {}
 }
-
-
-export type AuthActions = | LoginAction | LoginEffect;
+  
+export type AuthActions = LoginAction | LoginEffect;
 
