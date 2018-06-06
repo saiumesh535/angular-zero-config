@@ -10,7 +10,7 @@ import { reducers } from './reducers';
       metaReducers: []
     }),
     StoreDevtoolsModule.instrument({
-      name: 'NgRx Book Store DevTools',
+      name: 'Learn Angular',
       logOnly: true,
     }),
 

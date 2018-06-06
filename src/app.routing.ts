@@ -4,6 +4,7 @@ import { DashboardComponent } from './app/dashboard/dashboard.component';
 import { WelcomeComponent } from './app/welcome/welcome.component';
 import { ContentComponent } from './app/content/content.component';
 import { ContentResolver } from './app/content/content.resolver';
+import { WelcomeResolver } from './app/welcome/welcome.resolver';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
       {
         path: '',
         component: WelcomeComponent,
+        resolve: { metadata: WelcomeResolver },
         children: [
           {
             path: 'content',

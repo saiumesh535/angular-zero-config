@@ -15,6 +15,6 @@ export class LoginEffect implements Action {
   readonly type = LoginActionType.LoginEffect;
   constructor(public payload: State ) {}
 }
-  
+
 export type AuthActions = LoginAction | LoginEffect;
 

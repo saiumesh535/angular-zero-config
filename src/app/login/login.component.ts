@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   public githubLink = 'https://github.com/saiumesh535/angular-zero-config';
 
-  constructor(private router: Router, private store: Store<authState.State>) { 
+  constructor(private router: Router, private store: Store<authState.State>) {
     this.store.pipe(select(selectLoginPageState)).pipe().subscribe(lol => {
       console.log('sasa', lol);
     });

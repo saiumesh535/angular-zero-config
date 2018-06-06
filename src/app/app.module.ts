@@ -16,6 +16,7 @@ import { ContentComponent } from './content/content.component';
 import { ContentResolver } from './content/content.resolver';
 import { StoreModuler } from './ngrx-store/store.module';
 import { EffectsModuler } from './ngrx-effetcs/effetcs.module';
+import { WelcomeResolver } from './welcome/welcome.resolver';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { EffectsModuler } from './ngrx-effetcs/effetcs.module';
     StoreModuler,
     EffectsModuler,
   ],
-  providers: [ ContentResolver ],
+  providers: [ ContentResolver, WelcomeResolver ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
