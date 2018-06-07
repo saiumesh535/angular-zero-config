@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, Output } from '@angular/core';
 
 import { RxJsSubject } from '../services';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-search-input',

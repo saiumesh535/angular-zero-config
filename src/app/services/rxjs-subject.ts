@@ -1,5 +1,5 @@
 import { Subject, Observable } from 'rxjs';
-import { filter, debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 export interface BaseRxJS {
   length: number;
@@ -19,6 +19,5 @@ export abstract class RxJsSubject<T extends BaseRxJS> {
       distinctUntilChanged(),
     );
   }
-
 
 }
