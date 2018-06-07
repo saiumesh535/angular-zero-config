@@ -1,9 +1,7 @@
 <div class="wrapper">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Search" [(ngModel)]="search" (ngModelChange)="onSearchUpdate()" value="">
-  </mat-form-field>
+  <app-search-input (inputChange)="onInputChange($event)"></app-search-input>
   <div class="buttons__wrapper">
-    <div *ngFor="let topic of (topics$ | async)">
+    <div *ngFor="let topic of ( topics$ | async )">
       <p>{{topic}}</p>
     </div>
   </div>

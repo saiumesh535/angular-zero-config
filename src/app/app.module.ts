@@ -17,6 +17,7 @@ import { ContentResolver } from './content/content.resolver';
 import { StoreModuler } from './ngrx-store/store.module';
 import { EffectsModuler } from './ngrx-effetcs/effetcs.module';
 import { WelcomeResolver } from './welcome/welcome.resolver';
+import { SearchInputComponent } from './search-input/search-input.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { WelcomeResolver } from './welcome/welcome.resolver';
     DashboardComponent,
     WelcomeComponent,
     NavigationComponent,
-    ContentComponent
+    ContentComponent,
+    SearchInputComponent
   ],
   imports: [
     BrowserModule,
