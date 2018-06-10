@@ -20,7 +20,7 @@ export interface UserModuleState {
 export const reducers = {
   nav: navReducers.reducer,
   auth: authData.reducer,
-  [StateKeys.welcome]: welcomeReducer.reducer,
+  welcome: welcomeReducer.reducer,
 };
 
 
