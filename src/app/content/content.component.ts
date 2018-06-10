@@ -27,7 +27,6 @@ export class ContentComponent {
       if (code.length > 10) {
         code.split('<code>').forEach((data) => {
             const lol = '<code>' + data;
-            console.log(lol);
             result = result + lol.replace(new RegExp(/<code>[\s\S]*?<\/code>/, 'g'),
             `<code>${beautify(lol.split('<code>')[1].split('</code>')[0])}</code>`
             );
