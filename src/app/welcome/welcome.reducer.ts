@@ -1,4 +1,3 @@
-import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { welcomeActions, WelcomeActionType } from './welcome.actions';
 
 export interface Welcome {

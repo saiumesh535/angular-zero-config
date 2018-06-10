@@ -1,20 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs';
+
+import { UserModuleState } from '../ngrx-store/reducers';
+import { selectCodeSnippet } from './content.selector';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent {
+  public metadata: Observable<string>;
 
-  public metadata: string;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private store: Store<UserModuleState>) {
+    this.metadata = this.store.pipe(select(selectCodeSnippet)).pipe(
+      map(code => this.beautifyCode(code))
+    );
+  }
 
-  ngOnInit() {
-    this.route.data.subscribe(lol => {
-      this.metadata = lol.metadata;
-    });
+  private beautifyCode(code: any): string {
+    return code.replace(/<code>[\s\S]*?<\/code>/, code);
   }
 
 }

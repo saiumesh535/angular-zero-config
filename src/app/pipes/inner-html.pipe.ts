@@ -7,7 +7,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class InnerHTMLPipe implements PipeTransform {
   constructor(private sanitizer: DomSanitizer) {}
   transform(htmlString: string): any {
-    console.log('innerHTML', this.sanitizer.bypassSecurityTrustHtml(htmlString));
     return this.sanitizer.bypassSecurityTrustHtml(htmlString);
   }
 

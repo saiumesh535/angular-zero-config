@@ -8,3 +8,5 @@
 2. https://stackblitz.com/edit/ngx-highlightjs
 3. example: https://stackblitz.com/edit/ngx-highlightjs-all?file=app%2Fhome%2Fhome.component.ts
 4. online example with tinymce https://www.tinymce.com/docs/plugins/codesample/
+5. firepad https://stackoverflow.com/questions/28993066/is-there-a-frictionless-way-to-save-input-with-multiple-lines-in-firebase
+6. replace between html tags https://stackoverflow.com/questions/20779071/how-to-find-and-replace-text-in-between-two-tags-in-html-or-xml-document-using-j
