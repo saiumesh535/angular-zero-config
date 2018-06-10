@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { Action } from '@ngrx/store';
-import { tap, map, exhaustMap, catchError } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 import { ofType, Actions, Effect } from '@ngrx/effects';
 import { LoginActionType, LoginEffect } from './login.actions';
-import { State } from './login.reducer';
 
 @Injectable()
 export class LoginEffetcs {

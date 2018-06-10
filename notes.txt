@@ -1,2 +1,10 @@
 1. sidebar issue fix https://stackoverflow.com/questions/15381172/how-to-make-flexbox-children-100-height-of-their-parent
 2. Inner HTMl angular code for blog post https://stackoverflow.com/questions/31548311/angular-html-binding
+3. code snippets in HTML page https://websemantics.uk/articles/displaying-code-in-web-pages/
+
+----------------------- code highlights ----------------------------------------------------------
+1. https://auralinna.blog/post/2017/code-syntax-highlighting-with-angular-and-prismjs
+  1.1 https://www.braceyourself.io/ng2-prism/
+2. https://stackblitz.com/edit/ngx-highlightjs
+3. example: https://stackblitz.com/edit/ngx-highlightjs-all?file=app%2Fhome%2Fhome.component.ts
+4. online example with tinymce https://www.tinymce.com/docs/plugins/codesample/

@@ -1,9 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subject, Observable, of, BehaviorSubject } from 'rxjs';
+import { Subject, BehaviorSubject } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { UserModuleState } from '../ngrx-store/reducers';
-import { RxJsSubject } from '../services';
 import { takeUntil } from 'rxjs/operators';
 import { selectTopicsFromState } from '../welcome/welcome.selectors';
 
@@ -20,7 +19,6 @@ export class NavigationComponent implements OnDestroy {
 
   constructor(private router: Router, private store: Store<UserModuleState>) {
     this.ngUnSubScribe = new Subject();
-    this.ngUnSubScribe = new Subject();
     this.topics$ = new BehaviorSubject([]);
     this.store.pipe(
       select(selectTopicsFromState),
@@ -36,10 +34,9 @@ export class NavigationComponent implements OnDestroy {
     this.ngUnSubScribe.complete();
   }
 
-  public onUpdate(lol: number): void {
-    this.router.navigate([`/dashboard/content/${lol}`]);
+  public onTopicUpdate(topic: string): void {
+    this.router.navigate([`dashboard/content/${topic.toLowerCase()}`]);
   }
-
 
   public onInputChange(inputData: string): void {
     this.topics$.next(this.topics.filter(topic => topic.toLocaleLowerCase()

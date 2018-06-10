@@ -11,7 +11,7 @@ export enum StateKeys {
 }
 
 export interface UserModuleState {
-  nav: navReducers.State;
+  nav: navReducers.NavigationState;
   auth: authData.State;
   [StateKeys.welcome]: welcomeReducer.Welcome;
 }
