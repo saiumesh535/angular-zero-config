@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import * as beautify from 'js-beautify';
 
 import { UserModuleState } from '../ngrx-store/reducers';
 import { selectCodeSnippet } from './content.selector';
@@ -20,8 +21,17 @@ export class ContentComponent {
     );
   }
 
-  private beautifyCode(code: any): string {
-    return code.replace(/<code>[\s\S]*?<\/code>/, code);
+  private beautifyCode(code: string): string {
+    try {
+      if (code.length > 10) {
+        return code.replace(new RegExp(/<code>[\s\S]*?<\/code>/, 'g'),
+        `<code>${beautify(code.split('<code>')[1].split('</code>')[0])}</code>`
+        );
+      }
+      return code;
+    } catch (err) {
+      return code;
+    }
   }
 
 }
