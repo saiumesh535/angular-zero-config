@@ -5,12 +5,26 @@ import { WelcomeComponent } from './app/welcome/welcome.component';
 import { ContentComponent } from './app/content/content.component';
 import { ContentResolver } from './app/content/content.resolver';
 import { WelcomeResolver } from './app/welcome/welcome.resolver';
+import { AdminComponent } from './app/admin/admin.component';
+import { CreatepostComponent } from './app/createpost/createpost.component';
+import { AdminAuthGuard } from './app/admin/admin-auth-guard';
 
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent,
     pathMatch: 'full',
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [ AdminAuthGuard ],
+    children: [
+      {
+        path: '',
+        component: CreatepostComponent,
+      }
+    ]
   },
   {
     path: 'dashboard',
@@ -32,7 +46,7 @@ const routes: Routes = [
           },
           {
             path: '**',
-            component: ContentComponent,
+            redirectTo: '',
           }
         ]
       }
@@ -40,7 +54,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: LoginComponent,
+    redirectTo: '',
   }
 ];
 

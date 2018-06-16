@@ -23,6 +23,10 @@ import { WelcomeResolver } from './welcome/welcome.resolver';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { InnerHTMLPipe } from './pipes/inner-html.pipe';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { AdminComponent } from './admin/admin.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { CreatepostComponent } from './createpost/createpost.component';
+import { AdminLoginDialogComponent } from './admin-login-dialog/admin-login-dialog.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,10 @@ import { AngularFirestore } from 'angularfire2/firestore';
     ContentComponent,
     SearchInputComponent,
     InnerHTMLPipe,
+    AdminComponent,
+    ToolbarComponent,
+    CreatepostComponent,
+    AdminLoginDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +56,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
     AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [ ContentResolver, WelcomeResolver, AngularFirestore ],
+  entryComponents: [ AdminLoginDialogComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
