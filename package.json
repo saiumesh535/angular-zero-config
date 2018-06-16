@@ -26,6 +26,7 @@
     "@ngrx/effects": "6.0.1",
     "@ngrx/store": "6.0.1",
     "@ngrx/store-devtools": "6.0.1",
+    "@tinymce/tinymce-angular": "^2.0.0",
     "angularfire2": "^5.0.0-rc.10",
     "core-js": "2.5.4",
     "firebase": "^5.0.4",

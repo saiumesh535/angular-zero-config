@@ -1,3 +1,9 @@
-<p>
-  createpost works!
-</p>
+<div class="wrapper">
+  <div>
+    <editor apiKey="8qipo2pn0jhorm45ulzsdyv4efryn9vs8vmddx8vtw6kplmf" [(ngModel)]="text" (ngModelChange)="onChange($event)"
+      [init]="tinymceProps"></editor>
+  </div>
+  <div>
+    <div highlight="all" [innerHTML]="metadata | innerHTML"></div>
+  </div>
+</div>

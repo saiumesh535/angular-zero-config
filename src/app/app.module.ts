@@ -27,7 +27,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { CreatepostComponent } from './createpost/createpost.component';
 import { AdminLoginDialogComponent } from './admin-login-dialog/admin-login-dialog.component';
-
+import { EditorModule } from '@tinymce/tinymce-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +54,7 @@ import { AdminLoginDialogComponent } from './admin-login-dialog/admin-login-dial
     EffectsModuler,
     HighlightModule.forRoot({ theme: 'atom-one-dark'}),
     AngularFireModule.initializeApp(environment.firebase),
+    EditorModule,
   ],
   providers: [ ContentResolver, WelcomeResolver, AngularFirestore ],
   entryComponents: [ AdminLoginDialogComponent ],
