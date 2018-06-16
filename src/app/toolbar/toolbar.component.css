@@ -1,0 +1,15 @@
+
+.logo {
+  cursor: pointer;
+  padding: 10px;
+  width: 42px; 
+  height: 42px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
