@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.css']
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent {
 
   constructor() { }
 
-  ngOnInit() {
+  public githubLink = 'https://github.com/saiumesh535/angular-zero-config';
+
+  public onpenRepo(): void {
+    window.open(this.githubLink, '_blank');
   }
 
 }

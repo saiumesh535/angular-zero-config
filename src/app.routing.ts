@@ -1,5 +1,4 @@
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './app/login/login.component';
 import { DashboardComponent } from './app/dashboard/dashboard.component';
 import { WelcomeComponent } from './app/welcome/welcome.component';
 import { ContentComponent } from './app/content/content.component';
@@ -9,12 +8,14 @@ import { AdminComponent } from './app/admin/admin.component';
 import { CreatepostComponent } from './app/createpost/createpost.component';
 import { AdminAuthGuard } from './app/admin/admin-auth-guard';
 import { HomeComponent } from './app/home/home.component';
+import { ShowPostsResolver } from './app/show-posts/show-posts.resolver';
 
 const routes: Routes = [
   {
     path: '',
     // component: LoginComponent,
     component: HomeComponent,
+    resolve: { data: ShowPostsResolver },
     pathMatch: 'full',
   },
   {

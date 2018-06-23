@@ -1,75 +1,95 @@
 .wrapper {
-    display: grid;
-    grid-template-rows: 0fr 1fr;
-    height: 100vh;
-  }
-  
+  display: grid;
+  grid-template-rows: 0fr 1fr;
+  height: 100vh;
+}
+
 .children {
-    background:#232931;
-    color: white;
-    padding: 10px;
-  }
-  
+  background: #232931;
+  color: white;
+  padding: 10px;
+}
+
 .toolbar {
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background: #2a3036;
-}
-.angular-logo{
-    width: 130px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background: #2a3036;
 }
 
-.container{
-    text-align: center;
-    /* margin: 100px; */
-    padding: 10px;
+.angular-logo {
+  width: 130px;
 }
-.title_font{
-    font-style: italic;
-    color: wheat;
+
+.container {
+  text-align: center;
+  /* margin: 100px; */
+  padding: 10px;
 }
-.vlc_icon{
-    margin: 0 20px 0 20px;
-    width: 30px;
+
+.title_font {
+  font-style: italic;
+  color: wheat;
 }
- .underline{    
-    text-align: center;
- }
- .underline > p{
-     content: '';
-     height: 3px;
-     background: wheat;
-     margin: 40px auto auto auto;
-     width: 15%;
- }
 
- .search-bar{
-     margin-top: 30px;
- }
- .search-bar > input{
-     text-align: center;
-     border-color: #e84279;
-     background: #1b1e25;
-     border-radius: 7px;
-     width: 40%;
-     height: 38px;
-     color: wheat;
-     font-size: 18px;
-     box-shadow: none !important;
- }
+.vlc_icon {
+  margin: 0 20px 0 20px;
+  width: 30px;
+}
 
- .search-bar > input::-webkit-input-placeholder{
-     font-size: 18px;
-     color: grey;
- }
- .search-bar >input:focus {
-      outline: none;
-      border-color: #1b1e25;
- }
+.underline {
+  text-align: center;
+}
 
+.underline>p {
+  content: '';
+  height: 3px;
+  background: wheat;
+  margin: 40px auto auto auto;
+  width: 15%;
+}
 
+.search-bar {
+  margin-top: 30px;
+}
 
- /* .search-bar > input:focus{
-    border-color: #e84279;
- } */
+.search-bar>input {
+  text-align: center;
+  border-color: #e84279;
+  background: #1b1e25;
+  border-radius: 7px;
+  width: 40%;
+  height: 38px;
+  color: wheat;
+  font-size: 18px;
+  box-shadow: none !important;
+}
+
+.search-bar>input::-webkit-input-placeholder {
+  font-size: 18px;
+  color: grey;
+}
+
+.search-bar>input:focus {
+  outline: none;
+  border-color: #1b1e25;
+}
+
+@media screen and (max-width: 500px) {
+  .container>h1 {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.umesh {
+  margin: 0 auto;
+  max-width: 74rem;
+}
+
+.post_show {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 3fr));
+  grid-gap: 10px;
+  margin: 10px 10px 0;
+}

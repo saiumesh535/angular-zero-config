@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  public filterPosts: string;
+
   constructor() { }
+
+  public onFilterChange(filter): void {
+    this.filterPosts = filter;
+  }
 
   ngOnInit() {
   }

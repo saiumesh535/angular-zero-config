@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HighlightModule } from 'ngx-highlightjs';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -29,6 +30,10 @@ import { CreatepostComponent } from './createpost/createpost.component';
 import { AdminLoginDialogComponent } from './admin-login-dialog/admin-login-dialog.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { HomeComponent } from './home/home.component';
+import { FilterPostsComponent } from './filter-posts/filter-posts.component';
+import { ShowPostsComponent } from './show-posts/show-posts.component';
+import { ShowPostsResolver } from './show-posts/show-posts.resolver';
+import { HttpService } from './services/httpService';
 
 @NgModule({
   declarations: [
@@ -45,6 +50,8 @@ import { HomeComponent } from './home/home.component';
     CreatepostComponent,
     AdminLoginDialogComponent,
     HomeComponent,
+    FilterPostsComponent,
+    ShowPostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,8 +65,9 @@ import { HomeComponent } from './home/home.component';
     HighlightModule.forRoot({ theme: 'atom-one-dark'}),
     AngularFireModule.initializeApp(environment.firebase),
     EditorModule,
+    HttpClientModule,
   ],
-  providers: [ ContentResolver, WelcomeResolver, AngularFirestore ],
+  providers: [ ContentResolver, WelcomeResolver, AngularFirestore, ShowPostsResolver, HttpService ],
   entryComponents: [ AdminLoginDialogComponent ],
   bootstrap: [AppComponent]
 })

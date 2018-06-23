@@ -1,0 +1,23 @@
+.post_card {
+  background: #191826;
+  cursor: pointer;
+}
+
+.post_title {
+  color: #dfa612;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.post_description {
+  color: #faebd7;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.no_match {
+  font-style: italic;
+  color: wheat;
+  font-size: 25px;
+}
