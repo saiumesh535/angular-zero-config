@@ -6,16 +6,16 @@ import { map } from 'rxjs/operators';
 
 import { UserModuleState } from '../ngrx-store/reducers';
 import { WelcomeAddTopicsAction } from './welcome.actions';
-import * as firebase from '../firebase';
+import { FirebaseService, ITopics } from '../firebase';
 
 @Injectable()
 export class WelcomeResolver implements Resolve<void> {
-  constructor(private store: Store<UserModuleState>, private db: AngularFirestore) {}
+  constructor(private store: Store<UserModuleState>,
+    private firebaseService: FirebaseService,
+  ) {}
   public resolve(): void {
-    this.db.collection(firebase.collections.topics).snapshotChanges().pipe(
-      map(actions => actions.map(a => a.payload.doc.data()))
-    ).subscribe((data: firebase.ITopics[]) => {
-       return this.store.dispatch(new WelcomeAddTopicsAction({ topics: data.map(topic => topic.name) }));
+    this.firebaseService.getTopics().subscribe((data: ITopics[]) => {
+      return this.store.dispatch(new WelcomeAddTopicsAction({ topics: data.map(topic => topic.name) }));
     }, (error) => {
       return this.store.dispatch(new WelcomeAddTopicsAction({ topics: [] }));
     });

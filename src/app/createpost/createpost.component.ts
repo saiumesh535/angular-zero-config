@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { beautifyCode } from './../utils/beautify';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
+import { FirebaseService } from '../firebase';
 @Component({
   selector: 'app-createpost',
   templateUrl: './createpost.component.html',
@@ -27,13 +29,30 @@ export class CreatepostComponent implements OnInit {
 
   public text: string;
   public metadata: string;
-
-  constructor() { }
+  myGroup: FormGroup;
+  constructor(private firebaseService: FirebaseService) {
+    this.myGroup = new FormGroup({
+      'topic': new FormControl('', { validators: Validators.required }),
+      'metadata': new FormControl('', { validators: Validators.required })
+    });
+  }
 
   ngOnInit() {
   }
-  public onChange(event): void {
+
+  /**
+   * @param event this is an event with code in string format
+   */
+  public onChange(event: any): void {
     this.metadata = beautifyCode(event);
+    this.myGroup.controls['metadata'].setValue(this.metadata);
   }
 
+  /**
+   * this is to submit metadata code to firebase
+   */
+  public submitForm(): void {
+    console.log(this.myGroup.controls['topic'].value);
+    this.firebaseService.postTopic(this.myGroup.controls['topic'].value);
+  }
 }
