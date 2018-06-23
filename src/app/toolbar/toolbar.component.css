@@ -13,3 +13,9 @@
 .example-full-width {
   width: 100%;
 }
+.toolbar{
+  background: #2b3136;
+}
+.title{
+  color: wheat;
+}

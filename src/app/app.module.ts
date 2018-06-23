@@ -28,6 +28,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { CreatepostComponent } from './createpost/createpost.component';
 import { AdminLoginDialogComponent } from './admin-login-dialog/admin-login-dialog.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     ToolbarComponent,
     CreatepostComponent,
     AdminLoginDialogComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

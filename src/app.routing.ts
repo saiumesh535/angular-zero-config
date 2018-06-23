@@ -8,11 +8,13 @@ import { WelcomeResolver } from './app/welcome/welcome.resolver';
 import { AdminComponent } from './app/admin/admin.component';
 import { CreatepostComponent } from './app/createpost/createpost.component';
 import { AdminAuthGuard } from './app/admin/admin-auth-guard';
+import { HomeComponent } from './app/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent,
+    // component: LoginComponent,
+    component: HomeComponent,
     pathMatch: 'full',
   },
   {
