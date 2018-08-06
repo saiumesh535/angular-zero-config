@@ -34,6 +34,7 @@ import { FilterPostsComponent } from './filter-posts/filter-posts.component';
 import { ShowPostsComponent } from './show-posts/show-posts.component';
 import { ShowPostsResolver } from './show-posts/show-posts.resolver';
 import { HttpService } from './services/httpService';
+import { ShowcontentComponent } from './showcontent/showcontent.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { HttpService } from './services/httpService';
     HomeComponent,
     FilterPostsComponent,
     ShowPostsComponent,
+    ShowcontentComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,7 @@ import { HttpService } from './services/httpService';
     ReactiveFormsModule,
     StoreModuler,
     EffectsModuler,
-    HighlightModule.forRoot({ theme: 'atom-one-dark'}),
+    HighlightModule.forRoot({ theme: 'vs2015'}),
     AngularFireModule.initializeApp(environment.firebase),
     EditorModule,
     HttpClientModule,

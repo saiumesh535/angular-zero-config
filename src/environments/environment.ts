@@ -6,7 +6,7 @@ import { firebase } from './config';
 export const environment = {
   production: false,
   firebase,
-  baseURL: 'http://192.168.0.5:3000',
+  baseURL: 'http://localhost:3000',
 };
 
 /*

@@ -9,6 +9,7 @@ import { CreatepostComponent } from './app/createpost/createpost.component';
 import { AdminAuthGuard } from './app/admin/admin-auth-guard';
 import { HomeComponent } from './app/home/home.component';
 import { ShowPostsResolver } from './app/show-posts/show-posts.resolver';
+import { ShowcontentComponent } from './app/showcontent/showcontent.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
     component: HomeComponent,
     resolve: { data: ShowPostsResolver },
     pathMatch: 'full',
+  },
+  {
+    path: 'post/:title',
+    component: ShowcontentComponent,
   },
   {
     path: 'admin',

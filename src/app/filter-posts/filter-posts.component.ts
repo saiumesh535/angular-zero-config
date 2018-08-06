@@ -9,6 +9,7 @@ import { RxJsSubject } from '../services';
 export class FilterPostsComponent extends RxJsSubject<string> implements OnDestroy {
 
   @Output() public filterChange;
+  public filter: string;
 
   constructor() {
     super();

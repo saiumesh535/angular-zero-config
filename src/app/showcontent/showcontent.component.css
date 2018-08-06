@@ -1,0 +1,12 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 0fr 1fr;
+  height: 100vh;
+}
+
+
+.children {
+  background: #232931;
+  color: white;
+  padding: 10px;
+}
