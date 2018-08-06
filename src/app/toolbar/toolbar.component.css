@@ -1,0 +1,23 @@
+.logo {
+  cursor: pointer;
+  padding: 10px;
+  width: 42px;
+  height: 42px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.toolbar {
+  background: #2b3136;
+}
+
+.title {
+  color: wheat;
+  font-weight: bold;
+}

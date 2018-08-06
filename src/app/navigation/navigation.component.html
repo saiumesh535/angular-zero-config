@@ -1,8 +1,10 @@
 <div class="wrapper">
-  <p>This is navigation</p>
-  <div class="buttons__wrapper">
-    <div   *ngFor="let lol of [1,2,3,4,4,5,5,6,6,7,7,8,8,8,8,9,9,9,9,9,99,9,9,99,9,9,99]">
-      <button (click)="onUpdate(lol)">{{lol}}</button>
+  <div class="metadata">
+    <app-search-input (inputChange)="onInputChange($event)"></app-search-input>
+    <div class="buttons__wrapper">
+      <div *ngFor="let topic of ( topics$ | async )">
+        <p class="navigation_topic"  routerLinkActive="active" (click)="onTopicUpdate(topic)" >{{topic}}</p>
+      </div>
     </div>
   </div>
 </div>

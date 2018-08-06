@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 
 import * as authState from './login.reducer';
@@ -21,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   public githubLink = 'https://github.com/saiumesh535/angular-zero-config';
 
-  constructor(private router: Router, private store: Store<authState.State>) { 
+  constructor(private store: Store<authState.State>) {
     this.store.pipe(select(selectLoginPageState)).pipe().subscribe(lol => {
       console.log('sasa', lol);
     });

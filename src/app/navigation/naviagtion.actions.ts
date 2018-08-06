@@ -1,18 +1,17 @@
 import { Action } from '@ngrx/store';
-import { State } from './navigation.reducer';
+import { NavigationState } from './navigation.reducer';
 
 export enum NavActonType {
-  Change = '[NAV] Chnage',
+  Change = '[NAV] Change',
 }
 
 
 export class NavActionChnage implements Action {
   readonly type = NavActonType.Change;
-
-  constructor(public payload: State ) {}
+  constructor(public payload: NavigationState ) {}
 }
 
 
 
-export type AuthActions = | NavActionChnage;
+export type AuthActions = NavActionChnage;
 

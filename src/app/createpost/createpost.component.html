@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div>
+    <editor apiKey="8qipo2pn0jhorm45ulzsdyv4efryn9vs8vmddx8vtw6kplmf" [(ngModel)]="text" (ngModelChange)="onChange($event)" [init]="tinymceProps"></editor>
+  </div>
+  <div class="preview-code">
+    <div highlight="all" [innerHTML]="metadata | innerHTML"></div>
+  </div>
+  <div>
+    <form [formGroup]="myGroup">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="meta data type" formControlName="topic">
+      </mat-form-field>
+      <br>
+      <button mat-raised-button [disabled]="myGroup.invalid" (click)="submitForm()" color="primary">Primary</button>
+    </form>
+  </div>
+</div>

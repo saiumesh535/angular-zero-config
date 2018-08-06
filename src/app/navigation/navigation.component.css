@@ -3,4 +3,11 @@
   position: absolute;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+}
+
+.navigation_topic {
+  cursor: pointer;
+  color: steelblue;
+  text-decoration: underline;
 }

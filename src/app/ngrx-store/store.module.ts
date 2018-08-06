@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../../environments/environment';
 
 import { reducers } from './reducers';
 
@@ -10,8 +11,8 @@ import { reducers } from './reducers';
       metaReducers: []
     }),
     StoreDevtoolsModule.instrument({
-      name: 'NgRx Book Store DevTools',
-      logOnly: true,
+      name: 'Learn Angular',
+      logOnly: environment.production,
     }),
 
   ],

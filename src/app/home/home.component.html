@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <app-toolbar class="toolbar mat-elevation-z5"></app-toolbar>
+  <div class="children">
+    <div class="container">
+      <img class="angular-logo" src="assets/angular-logo.svg" alt="Learn Angular">
+      <h1 class="title_font">
+        <img class="vlc_icon" src="assets/stop.png"> Your search Stops here
+        <img class="vlc_icon" src="assets/stop.png">
+      </h1>
+      <div class="underline">
+        <p></p>
+      </div>
+     <app-filter-posts (filterChange)="onFilterChange($event)"  ></app-filter-posts>
+      <div class="umesh">
+        <app-show-posts [filterPosts]="filterPosts"  class="post_show"></app-show-posts>
+      </div>
+    </div>
+  </div>
+</div>

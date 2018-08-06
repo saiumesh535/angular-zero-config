@@ -1,0 +1,9 @@
+.wrapper {
+  overflow-y: auto;
+}
+
+/* overflow-y: auto;
+position: absolute;
+display: flex;
+flex-direction: column;
+padding: 10px; */

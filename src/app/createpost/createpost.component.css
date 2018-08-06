@@ -1,0 +1,9 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+.preview-code{
+    overflow-y: scroll;
+    height: calc(100vh - 400px);
+}

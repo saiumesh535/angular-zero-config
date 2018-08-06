@@ -1,0 +1,11 @@
+<mat-card class="post_card" *ngFor="let item of (filteredPosts | async)" >
+  <mat-card-header>
+    <mat-card-title class="post_title">{{item.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="post_description">
+    <p>{{item.description}}</p>
+  </mat-card-content>
+</mat-card>
+<div *ngIf="( filteredPosts | async )?.length === 0">
+  <p class="no_match"> Oops, no match found 😭 </p>  
+</div>
